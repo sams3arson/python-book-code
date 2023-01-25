@@ -1,4 +1,4 @@
-# decorator - a function that receives a function as an argument and returns another function
+# decorator - a function that receives a function as an argument and returns another modified function
 def document_it(func): # this is a decorator
     def new_function(*args, **kwargs):
         print("Func name:", func.__name__)

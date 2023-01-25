@@ -1,7 +1,9 @@
 animal = "cat"
 # variables set in the program without any functions are global variables
 # they are accessible by any function, but can't be changed inside the function
-# if you don't access that global variable before assigning a value to it inside function, no error will be raised
+# if you don't access that global variable before assigning a value to it\
+# inside function, it will create variable on functions' local level
+
 def print_animal(): # no error
     print("before:", animal)
 
