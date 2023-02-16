@@ -20,4 +20,5 @@ struct.unpack(">2L", data) # 2L instead of LL
 
 # for all specificators, look at screenshot or visit
 # https://www.bestprog.net/ru/2020/05/08/python-module-struct-packing-unpacking-data-basic-methods-ru
+# have a look at following modules: bitstring, construct, kaitai, hachoir, binio
 
