@@ -28,3 +28,28 @@ shutil.move("bullshit", "bullshit_moved")
 # renaming
 os.rename("bullshit_moved", "bullshit")
 
+# links and symlinks
+os.link("bullshit", "bullshit_link")
+print(os.path.isfile("bullshit_link"))
+os.remove("bullshit_link")
+
+os.symlink("bullshit", "bullshit_symlink")
+print(os.path.isfile("bullshit"),
+      os.path.islink("bullshit"))
+os.remove("bullshit_symlink")
+
+# chmod
+# as second arg we pass octadecimal number (0o prefix) that represents rights
+# as it would when we do 'chmod [number]'
+os.chmod("bullshit", 0o755)
+
+# chown
+uid = 5 # user ID
+gid = 22 # group ID
+# syntax:
+# os.chown(pathname, uid, gid)
+
+# removing
+os.remove("bullshit")
+print(os.path.exists("bullshit"))
+
