@@ -27,3 +27,22 @@ with open("villains.csv", "rt") as fin:
 
 pprint(villains)
 
+# Writing headers + data with DictWriter
+villains = [
+    {'first': 'Doctor', 'last': 'No'},
+    {'first': 'Rosa', 'last': 'Klebb'},
+    {'first': 'Mister', 'last': 'Big'},
+    {'first': 'Auric', 'last': 'Goldfinger'},
+    {'first': 'Ernst', 'last': 'Blofeld'},
+    ]
+with open("villains.csv", "w") as fout:
+    csvout = csv.DictWriter(fout, ["first", "last"])
+    csvout.writeheader()
+    csvout.writerows(villains)
+
+# Reading data as dict with DictReader
+with open("villains.csv", "r") as fin:
+    csvin = csv.DictReader(fin)
+    villains = [row for row in csvin]
+print(villains)
+

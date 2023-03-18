@@ -5,3 +5,7 @@
 - YAML
 - другие config files
 
+Универсальная библиотека - [tablib](http://docs.python-tablib.org/en/master) 
+может работать с табличными данными в форматах CSV, JSON, YAML, MS Excel, Pandas 
+DataFrame, etc.
+
