@@ -10,3 +10,6 @@ result = conn.execute(sa.text("""CREATE TABLE zoo
              count INT,
              damages FLOAT)"""))
 
+ins = sa.text("INSERT INTO zoo (critter, count, damages) VALUES ('duck', 10, 0.0)")
+conn.execute(ins)
+
